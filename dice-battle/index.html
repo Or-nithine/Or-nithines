@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ダイスバトル</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>ダイスバトル</h1>
+    <p class="rules">合計 15 以内で高い方が勝ち。16 以上はバースト（0 点）。</p>
+
+    <section class="side">
+      <h2>CPU</h2>
+      <div id="cpu-dice" class="dice"></div>
+      <div>合計: <span id="cpu-total" class="total">-</span></div>
+    </section>
+
+    <section class="side">
+      <h2>あなた</h2>
+      <div id="player-dice" class="dice"></div>
+      <div>合計: <span id="player-total" class="total">-</span></div>
+    </section>
+
+    <p id="message" class="message">「ゲーム開始」を押してください。</p>
+
+    <div class="buttons">
+      <button id="btn-roll" disabled>ロール</button>
+      <button id="btn-stay" disabled>ステイ</button>
+    </div>
+    <button id="btn-start" class="start">ゲーム開始</button>
+
+    <p class="record">
+      勝ち <span id="rec-win">0</span> ／
+      負け <span id="rec-lose">0</span> ／
+      引き分け <span id="rec-draw">0</span>
+    </p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
